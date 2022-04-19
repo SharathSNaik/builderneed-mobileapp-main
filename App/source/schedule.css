@@ -1,0 +1,101 @@
+  /*toggle button*/
+  .slick-prev:before {
+    color: black;
+  }
+  .slick-next:before {
+    color: black;
+  }
+  .toggle-label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    box-shadow: 5px 1px 5px 1px #888888;
+  }
+  .toggle-label input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .toggle-label input[type="checkbox"] + .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #dbdada;
+    transition: background 150ms linear;
+  }
+  .toggle-label input[type="checkbox"]:checked + .back {
+    background: #dbdada; /*green*/
+  }
+  
+  .toggle-label input[type="checkbox"] + .back .toggle {
+    display: block;
+    position: absolute;
+    content: " ";
+    background: #fff;
+    width: 50%;
+    height: 100%;
+    transition: margin 150ms linear;
+    border: 1px solid #808080;
+    border-radius: 10px;
+  }
+  .toggle-label input[type="checkbox"]:checked + .back .toggle {
+    margin-left: 190px;
+  }
+  .toggle-label .label {
+    display: block;
+    position: absolute;
+    width: 50%;
+    color: #ffb81c;
+    line-height: 80px;
+    text-align: center;
+    font-size: 24px;
+    margin-left: -15px;
+  }
+  .toggle-label .label.on {
+    left: 18px;
+    top: -12.5px;
+  }
+  .toggle-label .label.off {
+    right: 0px;
+    top: -12.5px;
+  }
+  
+  .toggle-label input[type="checkbox"]:checked + .back .label.on {
+    color: #fff;
+  }
+  .toggle-label input[type="checkbox"] + .back .label.off {
+    color: #fff;
+  }
+  .toggle-label input[type="checkbox"]:checked + .back .label.off {
+    color: #ffb81c;
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .nav-tabs {
+      font-size: 13.5px;
+    }
+    .toggle-label input[type="checkbox"]:checked + .back .toggle {
+      margin-left: 170px;
+    }
+  }
+  .divbar {
+    width: 100%;
+    background-color: #ccc;
+    padding: 10px;
+  }
+  
+  .icon {
+    display: inline;
+  }
+  
+  .h1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    font-size: 20px;
+  }

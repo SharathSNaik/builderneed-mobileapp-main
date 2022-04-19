@@ -1,0 +1,114 @@
+.header {
+  width: 100%;
+  max-width: 560px;
+  border-bottom: 1px solid #7A8590;
+  margin-bottom: 35px;
+}
+
+.header__title {
+  font-size: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: #7A8590;
+}
+
+.subscription-container {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 560px;
+}
+
+.subscription__title,
+.subscription__main-feature,
+.subscription__price {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #000000;
+}
+
+.subscription__main-feature {
+  font-size: 50px;
+}
+
+.subscription__price {
+  text-transform: uppercase;
+}
+
+.subscription__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  margin: 5px 0;
+  padding: 20px 0;
+  border-radius: 5px;
+  border: solid 1px rgb(138, 138, 138);
+  background: white;
+  box-shadow: 0px 0px 20px -10px rgba(58, 57, 57, 0.4);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.subscription__button:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 10px;
+  border: solid 3px #CDD1D5;
+  transform: translateY(-5%);
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:checked + label:before {
+  background: #6E8CA0;
+  font-size: 50px;
+}
+input[type=radio]:checked + label {
+  border: solid 3px #6E8CA0;
+  background: white;
+  transform: translateY(-10%);
+  transition: transform 0.5s;
+}
+input[type=radio]:checked + label .subscription__title,
+input[type=radio]:checked + label .subscription__main-feature,
+input[type=radio]:checked + label .subscription__price {
+  color: #6E8CA0;
+}
+
+/* Signature */
+.signature {
+  color: #85A9C1;
+  font-family: Roboto, sans-serif;
+  padding-top: 25px;
+}
+
+.signature__name {
+  transition: 0.5s;
+  color: #6E8CA0;
+  text-decoration: none;
+}
+.signature__name:hover {
+  color: #1E6583;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  animation: pulse-animation 0.5s alternate infinite;
+  fill: #BA2632;
+}
+
+@keyframes pulse-animation {
+  to {
+    transform: scale(1.2);
+  }
+}
